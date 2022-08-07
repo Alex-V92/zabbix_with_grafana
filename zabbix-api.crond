@@ -1,0 +1,8 @@
+#
+
+#
+ZABBIX_API_HOME=/...
+ZABBIX_API_LOG=/.../log/...
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/bin
+
+10 * * * *  ${ZABBIX_API_HOME}/summary_macos_api_zabbix.py --metric domain,mdm,battery_condition,macos_cac_installed,macos_mgmt_profile,macos_conn_cert >> ${ZABBIX_API_LOG}/summary-macos.log 2>&1
